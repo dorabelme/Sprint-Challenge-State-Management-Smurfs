@@ -28,6 +28,8 @@ export const postData = (data) => dispatch => {
         .then(res => {
             // res.data.data
             dispatch({ type: FETCH_SMURF_DATA_SUCCESS, payload: res.data });
+            getData()(dispatch);
+           
         })
         .catch(err => {
             dispatch({ type: FETCH_SMURF_DATA_FAILURE, payload: err.response });

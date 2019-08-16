@@ -48,7 +48,8 @@ const SmurfForm = props => {
             </Form.Field>
             <div className="buttons">
                 <Button
-                    onClick={() => {
+                    onClick={(e) => {
+                         e.preventDefault();
                         props.postData(props.newSmurf);
                         props.setNewSmurf('');
                     }}
@@ -56,16 +57,18 @@ const SmurfForm = props => {
                     Add New Smurf
           </Button>
                 <Button
-                    onClick={() => {
+                    onClick={(e) => {
+                        e.preventDefault();
                         props.editData(props.newSmurf);
                     }}
                 >
                     Edit Smurf
           </Button>
                 <Button
-                    onClick={() => {
+                    onClick={(e) => {
+                        e.preventDefault();
                         props.deleteData(props.newSmurf.id);
-                        // props.setNewSmurf({ name: '', age: '', height: '', id: -1 });
+                        props.setNewSmurf({ name: '', age: '', height: '', id: -1 });
                     }}
                 >
                     Delete Smurf
