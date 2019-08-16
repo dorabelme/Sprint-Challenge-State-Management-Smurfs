@@ -32,7 +32,8 @@ export const postData = (data) => dispatch => {
            
         })
         .catch(err => {
-            dispatch({ type: FETCH_SMURF_DATA_FAILURE, payload: err.response });
+            console.log(err.response);
+            dispatch({ type: FETCH_SMURF_DATA_FAILURE, payload: err.response.statusText });
         });
 };
 
@@ -51,7 +52,8 @@ export const editData = (data) => {
                 dispatch({ type: FETCH_SMURF_DATA_SUCCESS, payload: res.data });
             })
             .catch(err => {
-                dispatch({ type: FETCH_SMURF_DATA_FAILURE, payload: err.response });
+                console.log(err.response);
+                dispatch({ type: FETCH_SMURF_DATA_FAILURE, payload: err.response.statusText });
             });
     };
 };
@@ -67,6 +69,6 @@ export const deleteData = (id) => dispatch => {
             dispatch({ type: FETCH_SMURF_DATA_SUCCESS, payload: res.data });
         })
         .catch(err => {
-            dispatch({ type: FETCH_SMURF_DATA_FAILURE, payload: err.response });
+            dispatch({ type: FETCH_SMURF_DATA_FAILURE, payload: err.response.statusText });
         });
 };
