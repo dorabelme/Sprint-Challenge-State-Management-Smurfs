@@ -1,6 +1,7 @@
 import React from 'react';
-import { Card, Icon } from 'semantic-ui-react';
+import { Card, Icon, Image } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
+import './card.scss';
 
 const Smurf = props => {
     console.log(props)

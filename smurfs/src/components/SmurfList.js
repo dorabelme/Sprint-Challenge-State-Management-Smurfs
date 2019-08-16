@@ -4,7 +4,9 @@ import Loader from 'react-loader-spinner';
 
 import { getData } from '../actions';
 import { Button } from 'semantic-ui-react';
+// import './photolist.scss';
 import 'semantic-ui-css/semantic.min.css';
+// import './photo.scss';
 
 import Smurf from './Smurf';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";

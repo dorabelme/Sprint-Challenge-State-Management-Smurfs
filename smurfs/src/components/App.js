@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import SmurfList from './SmurfList';
-
+import Form from './SmurfForm';
 
 function App() {
   const [newSmurf, setNewSmurf] = useState({ name: '', age: '', height: '', id: -1 });
@@ -12,6 +12,7 @@ function App() {
       <div>Welcome to your state management version of Smurfs!</div>
       <div>Start inside of your `src/index.js` file!</div>
       <div>Have fun!</div>
+      <Form newSmurf={newSmurf} setNewSmurf={setNewSmurf} />
       <SmurfList setNewSmurf={setNewSmurf} />
     </div>
   );

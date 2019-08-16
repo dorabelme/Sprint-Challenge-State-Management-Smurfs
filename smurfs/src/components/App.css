@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url('../assets/murf2.jpg');
   background-size: 1024px;
   background-repeat: repeat;
   padding-top: 30px;
